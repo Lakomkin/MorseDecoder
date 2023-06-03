@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    #voiceBox{
+        width: 20px;
+        height: 100px;
+        background-color: red;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .settings input{
+        width: 300px;
+    }
+    #mycanvas{
+        width: 400px;
+        height: 200px;
+    }  
+</style>
+<body>
+    <button>Start Recognition</button>
+    <audio src=""></audio>
+    <h1>Volume deviation</h1>
+
+
+
+
+    <div class="container">
+      <!--  <canvas id="mycanvas" width="300" height="100"></canvas> smoothie-->
+        <div id="voiceBox"></div>
+        
+
+
+        <div class="settings">
+            <h5>Чувствительность <p id="VolumeValue"></p></h5>
+            <input type="range" id="VolumeEdge" min="0" max="100" step="1">
+
+            <h5>Длинна точки <p id="dotDurationValue"></p></h5>
+            <input type="range" id="dotDuration" min="0" max="100" step="1">
+
+            <h5>Длинна тире <p id="dashDurationValue"></p></h5>
+            <input type="range" id="dashDuration" min="0" max="200" step="1">
+
+            <h5>Длинна пробела <p id="letterSpacingDurationValue"></p></h5>
+            <input type="range" id="letterSpacingDuration" min="0" max="100" step="1">
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="smoothie.js"></script>
+    <script  src="app.js" ></script>
+</body>
+
+</html>
